@@ -1,27 +1,22 @@
 
-export default function buildContent(data) {
-    console.log(data);
-    const temp = data.main.temp
+export default function buildContent(myData) {
+    
     const tempSpan = document.getElementById('temp')
-    tempSpan.textContent = temp
+    tempSpan.textContent = myData.temp
 
-    const feelslike = data.main.feels_like
     const feelsLikeSpan = document.getElementById('feels-like')
-    feelsLikeSpan.textContent = feelslike
+    feelsLikeSpan.textContent = myData.feelslike
         
-    const description = data.weather[0].description
     const descriptionh4 = document.getElementById('description')
-    descriptionh4.textContent = description
+    descriptionh4.textContent = myData.description
 
-    const humidity = data.main.humidity
     const humidityh4 = document.getElementById('humidity')
-    humidityh4.textContent = humidity
+    humidityh4.textContent = myData.humidity
 
-    const sunrise = data.sys.sunrise
     const sunriseSpan = document.getElementById('sunrise')
-    sunriseSpan.textContent = sunrise
+    sunriseSpan.textContent = myData.sunrise
 
-    const sunset = data.sys.sunset
     const sunsetSpan = document.getElementById('sunset')
-    sunsetSpan.textContent = sunset
+    sunsetSpan.textContent = myData.sunset
 }
+

@@ -1,12 +1,11 @@
 import './style.css'
 import buildContent from './modules/buildContent'
+import dataProcess from './modules/dataProcess'
 
 export const APIKEY = '6a05651102c94de61e3f7cf2e46a1338'
 
 
 const searchBtn = document.getElementById('searchbtn')
-
-const content = document.querySelector('.content')
 
 searchBtn.addEventListener('click', async function(e){
     e.preventDefault()
@@ -20,8 +19,8 @@ searchBtn.addEventListener('click', async function(e){
     const data = await res.json()
 
     
-    buildContent(data)
-    // content.appendChild()
+    buildContent(dataProcess(data))
+    
     
     
 })

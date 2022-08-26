@@ -1,0 +1,11 @@
+.today{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6. 1fr);
+    width: 500px;
+    border: 1px solid black;
+}
+.today > *{
+    margin: 10px;
+}

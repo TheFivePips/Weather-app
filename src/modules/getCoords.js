@@ -1,5 +1,6 @@
 import { APIKEY } from "../index";
 import getCurrentWeather from "./getCurrentWeather";
+import get5day3HourlyWeather from "./get5day3HourlyWeather";
 
 export default async function getCoords(cityname, statecode, countrycode){
     try {
@@ -12,6 +13,7 @@ export default async function getCoords(cityname, statecode, countrycode){
         
 
         getCurrentWeather(lat,lon)
+        get5day3HourlyWeather(lat,lon)
        
         
 

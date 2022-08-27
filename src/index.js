@@ -1,8 +1,11 @@
 import './style.css'
+import Logo from '../assets/logo.jpeg'
 import getCoords from './modules/getCoords'
 
 export const APIKEY = '6a05651102c94de61e3f7cf2e46a1338'
 
+const logo = document.getElementById('logo')
+logo.src = Logo
 
 const searchBtn = document.getElementById('searchbtn')
 

@@ -47,6 +47,20 @@ form{
 #temp{
   font-size: 40px;
 }
+#hourly-title{
+  display: flex;
+  justify-content: center;
+}
+.hourly-content{
+  display: flex;
+  
+}
+.hourly-block{
+  border: 1px solid black;
+  width: 33vw;
+  display: grid;
+  place-items: center;
+}
 .switch {
     position: relative;
     display: inline-block;

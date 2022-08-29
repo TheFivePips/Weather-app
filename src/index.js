@@ -11,10 +11,16 @@ const searchBtn = document.getElementById('searchbtn')
 
 searchBtn.addEventListener('click', function(e){
     e.preventDefault()
+    const hourlyContent = document.querySelector('.hourly-content')
+    hourlyContent.replaceChildren()
+    
     let input = document.getElementById('input').value
     let location = input.split(', ')
     let cityname = location[0]
     let statecode = location[1]
     let countrycode = location[2]
+    
     getCoords(cityname, statecode, countrycode)
 })
+
+getCoords('Cooperstown', 'NY', 'USA')

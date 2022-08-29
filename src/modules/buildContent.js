@@ -3,24 +3,24 @@ import PartlyCloudy from '../../assets/partly-cloudy.svg'
 import Rainy from '../../assets/rainy.svg'
 import Sunny from '../../assets/sunny.svg'
 
-import fromUnixTime from 'date-fns/fromUnixTime'
-import format from 'date-fns/format'
-import parseISO from 'date-fns/parseISO'
+// import fromUnixTime from 'date-fns/fromUnixTime'
+// import format from 'date-fns/format'
+// import parseISO from 'date-fns/parseISO'
 
 
 export default function buildContent(myData) {
     const { temp, feelslike, description, humidity, sunrise, sunset } = myData
 
     const icon = document.getElementById('weather-icon')
-    if(description === "cloudy"){
+    if(description === "cloudy" || description === "scattered clouds"){
         
         icon.src = Cloudy
     }
-    if(description === "rainy"){
+    if(description === "rainy" || description === "light rain"){
         
         icon.src = Rainy
     }
-    if(description === "sunny"){
+    if(description === "sunny" || description === "clear sky"){
         
         icon.src = Sunny
     }
@@ -32,21 +32,21 @@ export default function buildContent(myData) {
     tempSpan.textContent = temp
 
     const feelsLikeSpan = document.getElementById('feels-like')
-    feelsLikeSpan.textContent = ` ${feelslike}`
+    feelsLikeSpan.textContent = `Feels Like: ${feelslike}`
         
     const descriptionh4 = document.getElementById('description')
     descriptionh4.textContent = description
     
 
     const humidityh4 = document.getElementById('humidity')
-    humidityh4.textContent = ` ${humidity} %`
+    humidityh4.textContent = `Humidity: ${humidity} %`
 
-    const sunriseSpan = document.getElementById('sunrise')
-    // console.log(format(parseISO(fromUnixTime(sunrise)), 'p'));
+//     const sunriseSpan = document.getElementById('sunrise')
+//     // console.log(format(parseISO(fromUnixTime(sunrise)), 'p'));
 
-    sunriseSpan.textContent = ` ${fromUnixTime(sunrise).toUTCString().split(' ')[4]}`
+//     sunriseSpan.textContent = ` ${fromUnixTime(sunrise).toUTCString().split(' ')[4]}`
 
-    const sunsetSpan = document.getElementById('sunset')
-    sunsetSpan.textContent = ` ${fromUnixTime(sunset).toUTCString().split(' ')[4]}`
+//     const sunsetSpan = document.getElementById('sunset')
+//     sunsetSpan.textContent = ` ${fromUnixTime(sunset).toUTCString().split(' ')[4]}`
 }
 

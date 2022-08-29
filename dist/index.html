@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Weather-app</title>
 <script defer src="main.js"></script></head>
 <body>
@@ -18,12 +19,14 @@
     <div class="content">
         <h1 id="today-title">Today</h1>
         <div class="today">
-            <i id="weather-icon" class="fa-fa-sun-bright"></i>
-            <h3>Temperature:<span id="temp"> </span></h3>
+            <img id="weather-icon"></img>
+            <h3><span id="temp"></span></h3>
             <h4>Feels like:<span id="feels-like"> </span></h4>
-            <h4 id="description">description</h4>
-            <h4>Humidity:<span id="humidity"> </span></h4>
             <h4>Sunrise:<span id="sunrise"> </span></h4>
+
+            <h4>Humidity:<span id="humidity"> </span></h4>
+            <h4 id="description">description</h4>
+
             <h4>Sunset:<span id="sunset"> </span></h4>
             <label class="switch">
                 <input id="c/f-toggle" type="checkbox" checked>

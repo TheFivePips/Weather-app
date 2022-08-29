@@ -1,6 +1,6 @@
 
 export default function hourlyDataProcess(data){
-    console.log(data);
+    
 
     const myData = {
         "UTCTime": data.dt_txt,

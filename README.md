@@ -1,1 +1,0 @@
-This is a weather-app for the odin project

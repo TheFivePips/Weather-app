@@ -5,7 +5,7 @@ import buildHourlyContent from "./buildHourlyContent";
 export default async function get5day3HourlyWeather(lat,lon,){
     try{
 
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKEY}&units=metric`)
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKEY}&units=metric`, {mode: 'cors'})
         const data = await response.json()
         
 

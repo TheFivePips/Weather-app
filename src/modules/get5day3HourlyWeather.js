@@ -19,7 +19,7 @@ export default async function get5day3HourlyWeather(lat,lon,){
         })
 
     }catch(error){
-        console.log(error)
+        console.error(err.message)
         
     }
 }
